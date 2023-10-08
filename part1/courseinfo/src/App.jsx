@@ -15,21 +15,20 @@ const App = () => {
     );
   };
 
-  const Content = (props) => {
+  const Part = (props) => {
     return (
       <div>
-        <p>
-          {props.parts[0]}
-          {props.exercises[0]}
-        </p>
-        <p>
-          {props.parts[1]}
-          {props.exercises[1]}
-        </p>
-        <p>
-          {props.parts[2]}
-          {props.exercises[2]}
-        </p>
+        <p>{props.parts + " " + props.exercises}</p>
+      </div>
+    );
+  };
+
+  const Content = () => {
+    return (
+      <div>
+        <Part parts={parts[0]} exercises={exercises[0]} />
+        <Part parts={parts[1]} exercises={exercises[1]} />
+        <Part parts={parts[2]} exercises={exercises[2]} />
       </div>
     );
   };
